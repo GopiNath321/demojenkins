@@ -18,7 +18,7 @@ pipeline {
                                  ANYPOINT_CREDENTIALS = credentials('Gopi-feb')
                                }
                    steps {
-                            bat 'mvn package deploy -DmuleDeploy -DmuleVersion=4.3.0 -Dusername=Gopi-feb -Dpassword=Gopi@123 -DworkerType=Micro -Dworkers=1 -Dregion=us-west-2'
+                        bat 'mvn package deploy -DmuleDeploy -DmuleVersion=4.3.0 -Dusername=${ANYPOINT-USER} -Dpassword=${ANYPOINT-PASSWORD} -DworkerType=Micro -Dworkers=1 -Dregion=us-west-2'
                          }
                     }
          }
